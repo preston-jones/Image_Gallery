@@ -1,0 +1,224 @@
+/* raleway-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/raleway-v28-latin-600.eot');
+    /* IE9 Compat Modes */
+    src: url('./fonts/raleway-v28-latin-600.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('./fonts/raleway-v28-latin-600.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('./fonts/raleway-v28-latin-600.woff') format('woff'),
+        /* Modern Browsers */
+        url('./fonts/raleway-v28-latin-600.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('./fonts/raleway-v28-latin-600.svg#Raleway') format('svg');
+    /* Legacy iOS */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Raleway";
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    row-gap: 48px;
+}
+
+.categories_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.categories {
+    margin: 8px;
+    padding: 8px;
+    width: 150px;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.categories:hover {
+    background-color: black;
+    color: white;
+}
+
+.categories:focus {
+    background-color: black;
+    color: white;
+}
+
+.gallery-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.thumbnail-card {
+    margin: 3px;
+    cursor: pointer;
+}
+
+.thumbnail {
+    display: flex;
+    height: 200px;
+    width: 250px;
+    object-fit: cover;
+    text-align: center;
+}
+
+.thumbnail-overlay {
+    position: absolute;
+    background-color: transparent;
+    height: 200px;
+    width: 250px;
+    z-index: 1;
+}
+
+.thumbnail-overlay:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5))
+}
+
+.full-image-container {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.877);
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.full-image {
+    height: 80vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+.d-none {
+    display: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+}
+
+.close-icon {
+    height: 32px;
+    filter: invert();
+    cursor: pointer;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    margin: 40px;
+    cursor: pointer;
+    transition: all 25ms ease-in-out;
+}
+
+.arrow:hover,
+.close:hover {
+    scale: 1.2;
+    transition: all 25ms ease-in-out;
+}
+
+#arrow-right {
+    position: absolute;
+    right: 0px;
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+
+}
+
+#arrow-left {
+    position: absolute;
+    left: 0px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    height: 100px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 528px) {
+    
+.categories_container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.categories {
+    width: 100%;
+}
+
+
+.thumbnail {
+    display: flex;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    text-align: center;
+}
+
+.thumbnail-overlay {
+    position: absolute;
+    background-color: transparent;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+}
+
+.gallery-container {
+    padding: 0 32px 40px 32px;
+}
+    
+}

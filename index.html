@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildergallerie</title>
+    <link href="style.css" rel="stylesheet" type="Text/css">
+    <script src="script.js"></script>
+</head>
+<body id="body" onload="loadGallery(travelGallery,'travelGallery')">
+    <div class="header">
+        <div class="headline"><h1>Bildergallerie</h1></div>
+        <div class="categories_container">
+            <a href="#" class="categories" onclick="loadGallery(travelGallery,'travelGallery')">TRAVEL</a>
+            <a href="#" class="categories" onclick="loadGallery(foodGallery, 'foodGallery')">FOOD</a>
+            <a href="#" class="categories" onclick="loadGallery(portraitGallery, 'portraitGallery')">PORTRAIT</a>
+        </div>
+    </div>
+    <div class="gallery-container" id="gallery-container"></div>
+    <div class="footer">
+        <div>COPYRIGHT 2023 BY PRESTON JONES</div>
+    </div>
+</body>
+</html>
